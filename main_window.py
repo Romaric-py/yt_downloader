@@ -138,9 +138,10 @@ class MainWindow(ttk.Window):
             return
         
         # demander a l'utilisateur de choisir le format
-        format_id = self.choose_format_id(url)
-        if format_id is None:
-            return Messagebox.show_info("Download cancelled")
+        # format_id = self.choose_format_id(url)
+        # if format_id is None:
+        #     return Messagebox.show_info("Download cancelled")
+        format_id = None
         
         # Début du téléchargement
         self.status_label.config(text="The downloading has begun")

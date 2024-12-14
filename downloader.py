@@ -38,7 +38,7 @@ class Downloader:
         """Télécharge une vidéo YouTube."""
         ydl_opts = {
             "quiet": True,
-            'format': (f"{format_id}" or 'bestvideo[height<=720]') + 'bestaudio/best',
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', 
             'outtmpl': os.path.join(self.dest, '%(title)s.%(ext)s'),
             'progress_hooks': progress_hooks
         }
